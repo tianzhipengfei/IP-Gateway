@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IP_Gateway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UQX-na-6Rl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ydu-Va-mz5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GN-qM-sri">
+                                <rect key="frame" x="196.5" y="178.5" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-Ud-4Jy">
+                                        <rect key="frame" x="62" y="80" width="251" height="149"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-hq-8tV">
+                                                <rect key="frame" x="0.0" y="0.0" width="251" height="149"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="owl-login" translatesAutoresizingMaskIntoConstraints="NO" id="tIb-yj-pcL" userLabel="imgLogin">
+                                                        <rect key="frame" x="20" y="21" width="211" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="owl-login-arm-left" translatesAutoresizingMaskIntoConstraints="NO" id="cvm-87-zEZ" userLabel="rectLeftHand">
+                                                        <rect key="frame" x="3" y="115" width="40" height="65"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="owl-login-arm-right" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-JI-Zl3" userLabel="rectRightHand">
+                                                        <rect key="frame" x="203" y="115" width="40" height="65"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCE-z0-cda" userLabel="txtInfo">
+                                        <rect key="frame" x="16" y="443" width="343" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="vLogin" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-a1-9ch" userLabel="vLogin">
+                                        <rect key="frame" x="14" y="200" width="345" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtUser" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ci-J2-b5u" userLabel="txtUser">
+                                                <rect key="frame" x="52" y="30" width="248" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="AutoFillPwd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="XLk-da-fjJ"/>
+                                                </connections>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconfont-user" translatesAutoresizingMaskIntoConstraints="NO" id="qVv-BH-Ise">
+                                                <rect key="frame" x="28" y="34" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtPwd" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mir-lm-j4p" userLabel="txtPwd">
+                                                <rect key="frame" x="52" y="90" width="248" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="inputPwd:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="eWq-2I-TrG"/>
+                                                    <action selector="leavePwd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="P9m-UD-PNR"/>
+                                                </connections>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconfont-password" translatesAutoresizingMaskIntoConstraints="NO" id="rsw-Bk-PzE">
+                                                <rect key="frame" x="26" y="92" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSu-Ai-hET">
+                                        <rect key="frame" x="95" y="361" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="登陆"/>
+                                        <connections>
+                                            <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wR-9E-M8t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-SE-7Uu">
+                                        <rect key="frame" x="245" y="361" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="注销"/>
+                                        <connections>
+                                            <action selector="Cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qWk-FT-MJd"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-yB-9A5" userLabel="rectLeftHandGone">
+                                        <rect key="frame" x="71" y="176" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-mR-agC" userLabel="rectLeftHandGone">
+                                        <rect key="frame" x="268" y="176" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="BdH-jq-qtd"/>
+                                    <constraint firstAttribute="height" constant="667" id="YPT-5A-Rmm"/>
+                                    <constraint firstAttribute="width" secondItem="3GN-qM-sri" secondAttribute="height" multiplier="375:667" id="kOd-sp-A3w"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3GN-qM-sri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vWv-fZ-5Xa"/>
+                            <constraint firstItem="3GN-qM-sri" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zJw-ju-0dy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="butCancel" destination="bdU-SE-7Uu" id="8y3-04-zlZ"/>
+                        <outlet property="butLogin" destination="bSu-Ai-hET" id="cyS-bC-5W6"/>
+                        <outlet property="imgLeftHand" destination="cvm-87-zEZ" id="frx-wF-39D"/>
+                        <outlet property="imgLeftHandGone" destination="yIx-yB-9A5" id="RS1-ha-eIM"/>
+                        <outlet property="imgRightHand" destination="dMW-JI-Zl3" id="BeW-Eh-82y"/>
+                        <outlet property="imgRightHandGone" destination="oQG-mR-agC" id="VrP-OJ-JgW"/>
+                        <outlet property="txtInfo" destination="mCE-z0-cda" id="A6i-CX-O1O"/>
+                        <outlet property="txtPwd" destination="mir-lm-j4p" id="b1j-Bc-j2w"/>
+                        <outlet property="txtUser" destination="8Ci-J2-b5u" id="BxQ-5z-0gO"/>
+                        <outlet property="wholeview" destination="3GN-qM-sri" id="aON-2V-Kn7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_hand" width="100" height="100"/>
+        <image name="iconfont-password" width="72" height="72"/>
+        <image name="iconfont-user" width="72" height="72"/>
+        <image name="owl-login" width="211" height="108"/>
+        <image name="owl-login-arm-left" width="40" height="65"/>
+        <image name="owl-login-arm-right" width="40" height="65"/>
+    </resources>
+</document>
