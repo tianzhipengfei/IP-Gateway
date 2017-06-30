@@ -560,7 +560,7 @@
 				CODE_SIGN_ENTITLEMENTS = wIp/wIp.entitlements;
 				DEVELOPMENT_TEAM = 2M3CSYCYJV;
 				INFOPLIST_FILE = wIp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Eric.IPGateway.wIp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,7 +577,7 @@
 				CODE_SIGN_ENTITLEMENTS = wIp/wIp.entitlements;
 				DEVELOPMENT_TEAM = 2M3CSYCYJV;
 				INFOPLIST_FILE = wIp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Eric.IPGateway.wIp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -691,12 +691,12 @@
 				CODE_SIGN_ENTITLEMENTS = IP_Gateway/IP_Gateway.entitlements;
 				DEVELOPMENT_TEAM = 2M3CSYCYJV;
 				INFOPLIST_FILE = IP_Gateway/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Eric.IPGateway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -709,12 +709,12 @@
 				CODE_SIGN_ENTITLEMENTS = IP_Gateway/IP_Gateway.entitlements;
 				DEVELOPMENT_TEAM = 2M3CSYCYJV;
 				INFOPLIST_FILE = IP_Gateway/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Eric.IPGateway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

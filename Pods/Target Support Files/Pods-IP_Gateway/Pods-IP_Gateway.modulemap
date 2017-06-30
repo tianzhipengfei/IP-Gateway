@@ -1,0 +1,6 @@
+framework module Pods_IP_Gateway {
+  umbrella header "Pods-IP_Gateway-umbrella.h"
+
+  export *
+  module * { export * }
+}

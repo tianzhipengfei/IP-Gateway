@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  IP_Gateway
 //
-//  Created by 小方 on 2017/6/6.
-//  Copyright © 2017年 Eric. All rights reserved.
+//  Created by Eric on 2017/6/6.
+//  Copyrig ht © 2017年 Eric. All rights reserved.
 //
 
 
@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import ReachabilitySwift
 import KeychainSwift
+import SystemConfiguration.CaptiveNetwork
 
 
 var id : String?
@@ -36,7 +37,6 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         fillLastInfo()
@@ -44,12 +44,16 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
 
+
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
+
     //补全最后一次登陆信息
     func fillLastInfo(){
         if(userDic.string(forKey: "last") != nil){
@@ -78,7 +82,6 @@ class ViewController: UIViewController {
     
     //密码输入时，播放遮眼动画
     @IBAction func inputPwd(_ sender: UITextField) {
-        print(1)
         UIView.animate(withDuration: 0.5, animations: { () -> Void in
             self.imgLeftHand.frame = CGRect(
                 x: self.imgLeftHand.frame.origin.x + 80,
@@ -138,9 +141,10 @@ class ViewController: UIViewController {
             pwd = txtPwd.text
             let parameters: Parameters = ["ac_id":"1", "action":"login", "username": id!, "password": pwd!, "save_me":"0"]
             
-            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?url=&ac_id=1", method: .post, parameters: parameters).responseJSON { response in
+            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?url=", method: .post, parameters: parameters).responseJSON { response in
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print(utf8Text)
                     if(utf8Text.range(of: "网络已连接") != nil){
                         userDic.set((pwd!), forKey: (id!))
                         
@@ -159,19 +163,20 @@ class ViewController: UIViewController {
                                 if(aa != "not_online"){
                                     let bb = (aa.components(separatedBy: ","))
                                     var liuliang:Double = (Double)(bb[0])!
-                                    liuliang = liuliang / 1e9
+                                    liuliang = liuliang / 1073741824 //1,073,741,824 = 1024 ^ 3
                                     self.txtInfo.insertText("\n宝贝，你已经使用了" + String(format:"%.2lf",liuliang) + "G")
                                     if(liuliang>15){
                                         self.txtInfo.insertText("要克制呢～")
                                     }
                                     self.txtInfo.insertText("\n")
                                     self.txtInfo.insertText("\n钱包里只剩下" + bb[2] + "块钱了\n")
+                                   
                                 }
                             }
                         }
                         
                     }
-                    else if(utf8Text.range(of: "You are already online") != nil){
+                    else if(utf8Text.range(of: "E2620") != nil){
                         self.txtInfo.text = "诶呀呀，您已经在线了呢"
                     }
                     else if(utf8Text.range(of: "E2616") != nil){
@@ -202,7 +207,7 @@ class ViewController: UIViewController {
             pwd = txtPwd.text
             let parameters: Parameters = ["ac_id":"1", "action":"logout", "username": id!, "password": pwd!, "ajax":"1"]
             
-            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?url=&ac_id=1", method: .post, parameters: parameters).responseJSON { response in
+            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?url=", method: .post, parameters: parameters).responseJSON { response in
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     if(utf8Text.range(of: "网络已断开") != nil){
                         self.txtInfo.text = "网络断开了，拜拜～\n"

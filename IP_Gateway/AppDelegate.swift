@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  IP_Gateway
 //
-//  Created by 小方 on 2017/6/6.
+//  Created by Eric on 2017/6/6.
 //  Copyright © 2017年 Eric. All rights reserved.
 //
 
