@@ -10,59 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IP_Gateway/ViewController.swift"
-            timestampString = "520234984.834654"
+            timestampString = "524584839.911828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1180"
-            endingLineNumber = "1180">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IP_Gateway/ViewController.swift"
-            timestampString = "520234984.834654"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "Cancel(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IP_Gateway.ViewController.Cancel (__ObjC.UIButton) -&gt; ()"
-                  moduleName = "IP_Gateway"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tianzhili/%E9%A1%B9%E7%9B%AE/IP_Gateway/IP_Gateway/ViewController.swift"
-                  timestampString = "520230175.001475"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "209"
-                  endingLineNumber = "209"
-                  offsetFromSymbolStart = "4856">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IP_Gateway.ViewController.(Cancel (__ObjC.UIButton) -&gt; ()).(closure #1)"
-                  moduleName = "IP_Gateway"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tianzhili/%E9%A1%B9%E7%9B%AE/IP_Gateway/IP_Gateway/ViewController.swift"
-                  timestampString = "520230175.006012"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "210"
-                  endingLineNumber = "210"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
+            startingLineNumber = "1238"
+            endingLineNumber = "1238">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

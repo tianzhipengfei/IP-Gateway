@@ -19,6 +19,7 @@
 		134375281EE634540033112D /* IP_GatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134375271EE634540033112D /* IP_GatewayTests.swift */; };
 		134375331EE634540033112D /* IP_GatewayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134375321EE634540033112D /* IP_GatewayUITests.swift */; };
 		191D9F0C485EF1B8F58FA959 /* Pods_wIp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE561E7E9744BBE4DDA9301 /* Pods_wIp.framework */; };
+		5940ADAE1F38EA9000A12D0F /* forBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5940ADAD1F38EA9000A12D0F /* forBridge.m */; };
 		E13D6BE636B37060A923EB34 /* Pods_IP_Gateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598420453D3D331CD3206503 /* Pods_IP_Gateway.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		13F7F1011EF4DDD6008A7D56 /* wIp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wIp.entitlements; sourceTree = "<group>"; };
 		13FB9BDA1EE68A5900BCA44B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4F8FF36D5CED7143AEA1C544 /* Pods-wIp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wIp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wIp/Pods-wIp.release.xcconfig"; sourceTree = "<group>"; };
+		5940ADAC1F38EA9000A12D0F /* IP_Gateway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IP_Gateway-Bridging-Header.h"; sourceTree = "<group>"; };
+		5940ADAD1F38EA9000A12D0F /* forBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forBridge.m; sourceTree = "<group>"; };
 		598420453D3D331CD3206503 /* Pods_IP_Gateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IP_Gateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		902F7137DA64C95AA9E39636 /* Pods-wIp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wIp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wIp/Pods-wIp.debug.xcconfig"; sourceTree = "<group>"; };
 		E38C29F397D77B2EA181480E /* Pods-IP_Gateway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IP_Gateway.release.xcconfig"; path = "Pods/Target Support Files/Pods-IP_Gateway/Pods-IP_Gateway.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,12 +166,14 @@
 			isa = PBXGroup;
 			children = (
 				134375401EE645130033112D /* IP_Gateway.entitlements */,
+				1343751B1EE634530033112D /* LaunchScreen.storyboard */,
 				134375121EE634530033112D /* AppDelegate.swift */,
 				134375141EE634530033112D /* ViewController.swift */,
+				5940ADAD1F38EA9000A12D0F /* forBridge.m */,
 				134375161EE634530033112D /* Main.storyboard */,
 				134375191EE634530033112D /* Assets.xcassets */,
-				1343751B1EE634530033112D /* LaunchScreen.storyboard */,
 				1343751E1EE634530033112D /* Info.plist */,
+				5940ADAC1F38EA9000A12D0F /* IP_Gateway-Bridging-Header.h */,
 			);
 			path = IP_Gateway;
 			sourceTree = "<group>";
@@ -298,6 +303,9 @@
 		134375071EE634530033112D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1234,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Eric;
@@ -315,6 +323,7 @@
 					1343750E1EE634530033112D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 2M3CSYCYJV;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -484,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5940ADAE1F38EA9000A12D0F /* forBridge.m in Sources */,
 				134375151EE634530033112D /* ViewController.swift in Sources */,
 				134375131EE634530033112D /* AppDelegate.swift in Sources */,
 			);
@@ -688,6 +698,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = IP_Gateway/IP_Gateway.entitlements;
 				DEVELOPMENT_TEAM = 2M3CSYCYJV;
 				INFOPLIST_FILE = IP_Gateway/Info.plist;
@@ -695,6 +706,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Eric.IPGateway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IP_Gateway/IP_Gateway-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -706,6 +719,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = IP_Gateway/IP_Gateway.entitlements;
 				DEVELOPMENT_TEAM = 2M3CSYCYJV;
 				INFOPLIST_FILE = IP_Gateway/Info.plist;
@@ -713,6 +727,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Eric.IPGateway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IP_Gateway/IP_Gateway-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -35,6 +35,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         if(!reachability.isReachableViaWiFi){
             self.wtxtInfo.text = "大哥，先连下WIFI呗"
         }
+        else if(userDic.string(forKey: "last") == "20154537"){
+            testCancelJudge()
+        }
+            
         else if(userDic.string(forKey: "last") != nil){
             self.wtxtInfo.text = "注销中..."
             let id = userDic.string(forKey: "last")
@@ -67,6 +71,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let reachability = Reachability()!
         if(!reachability.isReachableViaWiFi){
             self.wtxtInfo.text = "大哥，先连下WIFI呗"
+        }
+        else if(userDic.string(forKey: "last") == "20154537"){
+            testLoginJudge()
         }
         else if(userDic.string(forKey: "last") != nil){
             self.wtxtInfo.text = "登陆中..."
@@ -152,6 +159,30 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
         
         completionHandler(NCUpdateResult.newData)
+    }
+    
+    func testLoginJudge(){
+        if( userDic.string(forKey:"last") != nil){
+            self.wtxtInfo.text = "登陆中..."
+            if("userDic.string(forKey:last" == "20154637"){
+                self.wtxtInfo.text = "登陆成功"
+            }
+        }
+        else{
+            self.wtxtInfo.text = "请先到主应用登陆一次让我记住账号"
+        }
+    }
+    
+    func testCancelJudge(){
+        if( userDic.string(forKey:"last") != nil){
+            self.wtxtInfo.text = "注销中..."
+            if("userDic.string(forKey:last" == "20154637"){
+                self.wtxtInfo.text = "注销成功"
+            }
+        }
+        else{
+            self.wtxtInfo.text = "请先到主应用登陆一次让我记住账号"
+        }
     }
     
 }

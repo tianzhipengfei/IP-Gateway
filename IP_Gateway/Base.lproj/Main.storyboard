@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,6 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IP_Gateway" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UQX-na-6Rl"/>
@@ -136,11 +137,12 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                         </constraints>
                                         <state key="normal" title="Button" image="icon-happy"/>
                                         <connections>
-                                            <segue destination="3xs-h6-wHF" kind="show" identifier="122" id="JbZ-sf-ZPw"/>
+                                            <segue destination="3xs-h6-wHF" kind="modal" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="JbZ-sf-ZPw"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="BdH-jq-qtd"/>
                                     <constraint firstAttribute="height" constant="667" id="YPT-5A-Rmm"/>
@@ -149,6 +151,7 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="LHd-qS-R83" firstAttribute="top" secondItem="UQX-na-6Rl" secondAttribute="bottom" constant="20" id="ASB-1g-khJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LHd-qS-R83" secondAttribute="trailing" constant="20" id="PCv-o7-hoX"/>
@@ -169,27 +172,13 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                         <outlet property="wholeview" destination="3GN-qM-sri" id="aON-2V-Kn7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.875" y="37.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HXG-VJ-VdQ">
-            <objects>
-                <navigationController id="l26-22-jRV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEo-Co-A1J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x2J-VW-8p2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-621" y="-508"/>
-        </scene>
-        <!--View Controller-->
+        <!--help-->
         <scene sceneID="DME-n9-ARR">
             <objects>
-                <viewController id="3xs-h6-wHF" sceneMemberID="viewController">
+                <viewController title="help" id="3xs-h6-wHF" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gT3-yv-NQI"/>
                         <viewControllerLayoutGuide type="bottom" id="NEz-ag-6ia"/>
@@ -206,7 +195,7 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                 </constraints>
                                 <state key="normal" title="Button" image="icon-left"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="221" id="DmI-pD-vWl"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="DmI-pD-vWl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7T-ao-dWM">
@@ -286,12 +275,20 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                             <constraint firstItem="CXt-vH-lv4" firstAttribute="leading" secondItem="mrr-GN-Djj" secondAttribute="leadingMargin" id="xN7-ZB-rZU"/>
                             <constraint firstItem="NEz-ag-6ia" firstAttribute="top" secondItem="XRM-U3-2dO" secondAttribute="bottom" constant="72" id="xnp-H7-GrM"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8P4-to-AcP" appends="YES" id="hBX-oC-SPr"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="fpe-FW-asx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q0m-k4-Ce3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="8P4-to-AcP">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="EvS-Zg-aus"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1481" y="37"/>
+            <point key="canvasLocation" x="807" y="37"/>
         </scene>
     </scenes>
     <resources>
@@ -305,4 +302,7 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
         <image name="owl-login-arm-right" width="40" height="65"/>
         <image name="widget-help" width="716" height="288"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DmI-pD-vWl"/>
+    </inferredMetricsTieBreakers>
 </document>
