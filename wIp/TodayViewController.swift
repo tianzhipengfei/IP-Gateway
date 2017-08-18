@@ -29,6 +29,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var wbotLogin: UIButton!
     @IBOutlet weak var wbotCancel: UIButton!
     @IBOutlet weak var wtxtInfo: UILabel!
+    @IBOutlet weak var butLimit: UIView!
     
     @IBAction func Cancel(_ sender: UIButton) {
         let reachability = Reachability()!
@@ -142,6 +143,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         //showWifi()
+//        butLimit.center = c
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
     }
