@@ -25,11 +25,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 //    @IBAction func login(_ sender: UIButton) {
 //    }
     
-    
     @IBOutlet weak var wbotLogin: UIButton!
     @IBOutlet weak var wbotCancel: UIButton!
     @IBOutlet weak var wtxtInfo: UILabel!
     @IBOutlet weak var butLimit: UIView!
+    @IBOutlet weak var wbotLoginPC: UIButton!
     
     @IBAction func Cancel(_ sender: UIButton) {
         let reachability = Reachability()!
@@ -49,6 +49,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     if(utf8Text.range(of: "网络已断开") != nil){
                         self.wtxtInfo.text = "注销成功"
+//                        print(3)
                     }
                     else if(utf8Text.range(of: "您似乎未曾连接到网络") != nil){
                         self.wtxtInfo.text = "未曾联网"
@@ -68,6 +69,62 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     }
     
+    //电脑登录
+    @IBAction func LoginPC(_ sender: UIButton) {
+        let reachability = Reachability()!
+        if(!reachability.isReachableViaWiFi){
+            self.wtxtInfo.text = "大哥，先连下WIFI呗"
+        }
+        else if(userDic.string(forKey: "last") == "20154537"){
+            testLoginJudge()
+        }
+        else if(userDic.string(forKey: "last") != nil){
+            self.wtxtInfo.text = "登陆中..."
+            let id = userDic.string(forKey: "last")
+            let pwd = userDic.string(forKey: id!)
+            let parameters: Parameters = ["ac_id":"1", "action":"login", "username": id!, "password": pwd!, "save_me":"0"]
+            let headers: HTTPHeaders = ["User-Agent": "Windows NT 10.0"]
+            
+            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?ac_id=1&", method: .post, parameters: parameters, headers: headers).responseJSON { response in
+                
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    if(utf8Text.range(of: "网络已连接") != nil){
+                        let k = arc4random() % UInt32(10000000) + UInt32(1)     //生成随机查询key值
+                        let url2 = "https://ipgw.neu.edu.cn/include/auth_action.php?k="+String(k)
+                        let parameters2: Parameters = ["action":"get_online_info", "key": k]
+                        Alamofire.request(url2, method: .post, parameters: parameters2).responseJSON { response in
+                            if let data = response.data, let aa = String(data: data, encoding: .utf8) {
+                                if(aa != "not_online"){
+//                                    print(2)
+                                    let bb = (aa.components(separatedBy: ","))
+                                    var liuliang:Double = (Double)(bb[0])!
+                                    liuliang = liuliang / 1073741824
+                                    self.wtxtInfo.text = "登陆成功，已使用了" + String(format:"%.2lf",liuliang) + "G"
+                                }
+                            }
+                        }
+                        
+                    }
+                    else if(utf8Text.range(of: "You are already online") != nil){
+                        self.wtxtInfo.text = "已经在线"
+                    }
+                    else if(utf8Text.range(of: "E2616") != nil){
+                        self.wtxtInfo.text = "已欠费"
+                    }
+                    else{
+                        self.wtxtInfo.text = "账户或密码错误"
+                    }
+                }
+            }
+        }
+        else{
+            self.wtxtInfo.text = "请先到主应用登陆一次让我记住账号"
+        }
+    }
+    
+    
+    
+    //手机登录
     @IBAction func Login(_ sender: UIButton) {
         let reachability = Reachability()!
         if(!reachability.isReachableViaWiFi){
@@ -81,8 +138,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let id = userDic.string(forKey: "last")
             let pwd = userDic.string(forKey: id!)
             let parameters: Parameters = ["ac_id":"1", "action":"login", "username": id!, "password": pwd!, "save_me":"0"]
+            let headers: HTTPHeaders = ["User-Agent": "iPhone"]
             
-            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?ac_id=1&", method: .post, parameters: parameters).responseJSON { response in
+            Alamofire.request("https://ipgw.neu.edu.cn/srun_portal_pc.php?ac_id=1&", method: .post, parameters: parameters, headers: headers).responseJSON { response in
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     if(utf8Text.range(of: "网络已连接") != nil){
@@ -92,6 +150,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                         Alamofire.request(url2, method: .post, parameters: parameters2).responseJSON { response in
                             if let data = response.data, let aa = String(data: data, encoding: .utf8) {
                                 if(aa != "not_online"){
+//                                    print(1)
                                     let bb = (aa.components(separatedBy: ","))
                                     var liuliang:Double = (Double)(bb[0])!
                                     liuliang = liuliang / 1073741824
@@ -119,6 +178,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     }
     
+    
+    
     func getMAC()->(success:Bool,ssid:String,mac:String){
         
         if let cfa:NSArray = CNCopySupportedInterfaces() {
@@ -142,7 +203,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewDidLoad() {
-        //showWifi()
+        showWifi()
 //        butLimit.center = c
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.

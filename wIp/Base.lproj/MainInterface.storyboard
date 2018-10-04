@@ -21,54 +21,79 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjr-bt-4ME">
-                                <rect key="frame" x="16" y="20" width="288" height="24"/>
+                                <rect key="frame" x="16" y="17" width="288" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="Phz-la-s9z"/>
                                     <constraint firstAttribute="height" constant="24" id="bs3-q4-gIN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-MM-yl9">
-                                <rect key="frame" x="62.5" y="60" width="195" height="34"/>
+                                <rect key="frame" x="30" y="61" width="260" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egA-2e-oiu">
-                                        <rect key="frame" x="8" y="0.0" width="80" height="33"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LR7-dW-huw" userLabel="verticalLine1">
+                                        <rect key="frame" x="85" y="6" width="3" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="登陆">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dq3-rN-9sK" userLabel="verticalLine2">
+                                        <rect key="frame" x="170" y="6" width="3" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Div-Wr-6K5" userLabel="horizoneLine">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLJ-sl-onD" userLabel="Wbot Login_PC">
+                                        <rect key="frame" x="90" y="1" width="80" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="电脑">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="Login:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="1SO-fK-u2I"/>
+                                            <action selector="LoginPC:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="HWp-Cf-fEO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhd-ZI-Sao">
-                                        <rect key="frame" x="107" y="0.0" width="80" height="33"/>
+                                        <rect key="frame" x="175" y="1" width="80" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="注销">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="Cancel:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="kMC-2g-pKo"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egA-2e-oiu" userLabel="Wbot Login_Mob">
+                                        <rect key="frame" x="5" y="1" width="80" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="手机">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Login:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="1SO-fK-u2I"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="CTT-Ql-9iY"/>
-                                    <constraint firstAttribute="width" constant="195" id="bzS-bY-9f0"/>
+                                    <constraint firstAttribute="width" constant="260" id="bzS-bY-9f0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dnZ-MM-yl9" firstAttribute="top" secondItem="kjr-bt-4ME" secondAttribute="bottom" constant="16" id="DTO-gg-nA9"/>
-                            <constraint firstItem="kjr-bt-4ME" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="20" id="JUP-2p-iFA"/>
+                            <constraint firstItem="dnZ-MM-yl9" firstAttribute="top" secondItem="kjr-bt-4ME" secondAttribute="bottom" constant="20" id="DTO-gg-nA9"/>
+                            <constraint firstItem="kjr-bt-4ME" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="17" id="JUP-2p-iFA"/>
                             <constraint firstItem="kjr-bt-4ME" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="QEC-yg-jEA"/>
                             <constraint firstItem="dnZ-MM-yl9" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="beP-4U-RjF"/>
                         </constraints>
@@ -83,6 +108,7 @@
                         <outlet property="butLimit" destination="dnZ-MM-yl9" id="qCq-UA-80C"/>
                         <outlet property="wbotCancel" destination="zhd-ZI-Sao" id="ZZB-7n-ATT"/>
                         <outlet property="wbotLogin" destination="egA-2e-oiu" id="crm-uB-GCV"/>
+                        <outlet property="wbotLoginPC" destination="rLJ-sl-onD" id="cyb-Hg-1f1"/>
                         <outlet property="wtxtInfo" destination="kjr-bt-4ME" id="6iQ-Un-lVt"/>
                     </connections>
                 </viewController>
