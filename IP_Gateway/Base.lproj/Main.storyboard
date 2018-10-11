@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,14 +20,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Ydu-Va-mz5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GN-qM-sri">
-                                <rect key="frame" x="0.5" y="1" width="374" height="666"/>
+                                <rect key="frame" x="1" y="1" width="318" height="567"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mdG-I4-CoP">
-                                        <rect key="frame" x="62" y="149" width="251" height="149"/>
+                                        <rect key="frame" x="34" y="149" width="251" height="149"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-hq-8tV">
                                                 <rect key="frame" x="0.0" y="0.0" width="251" height="149"/>
@@ -53,7 +54,7 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" restorationIdentifier="vLogin" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-a1-9ch" userLabel="vLogin">
-                                        <rect key="frame" x="15" y="269" width="345" height="160"/>
+                                        <rect key="frame" x="-13" y="269" width="345" height="160"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtUser" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ci-J2-b5u" userLabel="txtUser">
                                                 <rect key="frame" x="52" y="30" width="248" height="30"/>
@@ -93,7 +94,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSu-Ai-hET">
-                                        <rect key="frame" x="78" y="430" width="31" height="30"/>
+                                        <rect key="frame" x="50" y="430" width="31" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="31" id="ehL-EI-Ftx"/>
                                             <constraint firstAttribute="height" constant="30" id="jb2-fg-0RF"/>
@@ -104,7 +105,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0L-te-HP0" userLabel="ButLoginPC">
-                                        <rect key="frame" x="172" y="430" width="31" height="30"/>
+                                        <rect key="frame" x="144" y="430" width="31" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="31" id="6sb-G9-6dB"/>
                                             <constraint firstAttribute="height" constant="30" id="G6j-hx-cQs"/>
@@ -115,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-SE-7Uu">
-                                        <rect key="frame" x="272" y="430" width="31" height="30"/>
+                                        <rect key="frame" x="244" y="430" width="31" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1tc-IF-gyN"/>
                                             <constraint firstAttribute="width" constant="31" id="9Fm-Bs-SAV"/>
@@ -126,21 +127,21 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-yB-9A5" userLabel="rectLeftHandGone">
-                                        <rect key="frame" x="70" y="245" width="40" height="40"/>
+                                        <rect key="frame" x="42" y="245" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NFN-Nv-ah0"/>
                                             <constraint firstAttribute="width" constant="40" id="xEx-dU-IY0"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-mR-agC" userLabel="rectLeftHandGone">
-                                        <rect key="frame" x="267" y="245" width="40" height="40"/>
+                                        <rect key="frame" x="239" y="245" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NVt-7h-v3X"/>
                                             <constraint firstAttribute="width" constant="40" id="cwD-e0-zF1"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6LV-Nj-aLq">
-                                        <rect key="frame" x="40" y="600" width="295" height="47"/>
+                                        <rect key="frame" x="12" y="600" width="295" height="47"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlM-Az-4vo" userLabel="喜欢我的话请把我推荐给身边的人哦 ȏ.̮ȏ Please recommend me to someone who you love if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="47"/>
@@ -158,7 +159,7 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dnR-Gy-uAY">
-                                        <rect key="frame" x="43" y="470" width="288" height="120"/>
+                                        <rect key="frame" x="15" y="470" width="288" height="120"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCE-z0-cda" userLabel="txtInfo">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
@@ -172,6 +173,17 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                             <constraint firstAttribute="height" constant="120" id="w3Y-OC-fqt" userLabel="height = 120"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-qH-j0v">
+                                        <rect key="frame" x="24.5" y="40" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Iex-ke-gBw"/>
+                                            <constraint firstAttribute="width" constant="40" id="OUX-Co-Yw0"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="donation"/>
+                                        <connections>
+                                            <segue destination="EZp-h0-eHw" kind="show" id="4fp-xh-Zbp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -187,19 +199,19 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                     <constraint firstItem="oQG-mR-agC" firstAttribute="centerX" secondItem="3GN-qM-sri" secondAttribute="centerX" constant="100" id="O64-cd-Pl9"/>
                                     <constraint firstItem="6LV-Nj-aLq" firstAttribute="centerX" secondItem="3GN-qM-sri" secondAttribute="centerX" id="YFg-Xh-GTz"/>
                                     <constraint firstItem="bSu-Ai-hET" firstAttribute="top" secondItem="aIT-a1-9ch" secondAttribute="bottom" constant="1" id="hEl-Zo-J03"/>
-                                    <constraint firstAttribute="width" secondItem="3GN-qM-sri" secondAttribute="height" multiplier="187:333" id="lsV-UA-cQj"/>
                                     <constraint firstItem="bSu-Ai-hET" firstAttribute="centerX" secondItem="3GN-qM-sri" secondAttribute="centerX" constant="-94" id="mpc-l8-qjo"/>
                                     <constraint firstItem="aIT-a1-9ch" firstAttribute="top" secondItem="mdG-I4-CoP" secondAttribute="bottom" constant="-29" id="n2U-jC-LtE"/>
                                     <constraint firstItem="aIT-a1-9ch" firstAttribute="top" secondItem="yIx-yB-9A5" secondAttribute="bottom" constant="-16" id="pbd-V8-mR2"/>
                                     <constraint firstAttribute="width" secondItem="3GN-qM-sri" secondAttribute="height" multiplier="375:667" id="sf8-f0-7gd"/>
                                     <constraint firstItem="bdU-SE-7Uu" firstAttribute="centerX" secondItem="3GN-qM-sri" secondAttribute="centerX" constant="100" id="shG-fp-8ss"/>
                                     <constraint firstItem="bSu-Ai-hET" firstAttribute="top" secondItem="bdU-SE-7Uu" secondAttribute="top" id="tI6-CJ-l51"/>
+                                    <constraint firstItem="vSb-qH-j0v" firstAttribute="top" secondItem="3GN-qM-sri" secondAttribute="top" constant="40" id="tVZ-E4-osK"/>
                                     <constraint firstItem="u0L-te-HP0" firstAttribute="baseline" secondItem="bSu-Ai-hET" secondAttribute="baseline" id="tVg-3t-hg7"/>
                                     <constraint firstItem="dnR-Gy-uAY" firstAttribute="top" secondItem="bSu-Ai-hET" secondAttribute="bottom" constant="10" id="yVD-mr-O3B"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slE-fI-ycs">
-                                <rect key="frame" x="309" y="41" width="30" height="30"/>
+                                <rect key="frame" x="254" y="41" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DYL-dI-OrP"/>
                                     <constraint firstAttribute="width" constant="30" id="gBM-dw-ODS"/>
@@ -215,6 +227,7 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="slE-fI-ycs" secondAttribute="trailing" constant="20" id="A6n-hz-ArX"/>
                             <constraint firstItem="3GN-qM-sri" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="1" id="MVQ-sV-Dza"/>
+                            <constraint firstItem="vSb-qH-j0v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25.5" id="QhW-K6-iFY"/>
                             <constraint firstItem="3GN-qM-sri" firstAttribute="top" secondItem="slE-fI-ycs" secondAttribute="bottom" constant="-70" id="Yoy-UI-fmM"/>
                             <constraint firstItem="Ydu-Va-mz5" firstAttribute="top" secondItem="3GN-qM-sri" secondAttribute="bottom" id="cwV-6G-3FX"/>
                             <constraint firstItem="3GN-qM-sri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vWv-fZ-5Xa"/>
@@ -238,6 +251,60 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
             </objects>
             <point key="canvasLocation" x="157.59999999999999" y="35.532233883058474"/>
         </scene>
+        <!--donation-->
+        <scene sceneID="Hfe-2b-vlA">
+            <objects>
+                <viewController title="donation" id="EZp-h0-eHw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WSw-3B-1eW"/>
+                        <viewControllerLayoutGuide type="bottom" id="EnE-fv-qCC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rL7-XR-Bxt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhx-Wm-bRm">
+                                <rect key="frame" x="16" y="40" width="34" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="icon-left"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="dXd-Bb-mCm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="199.99999999999994" placeholderIntrinsicHeight="300" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="7RO-80-hCl">
+                                <rect key="frame" x="60" y="75" width="200" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="sIS-dv-jV3"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBn-L9-GbX">
+                                <rect key="frame" x="40" y="214" width="240" height="279"/>
+                                <string key="text">    本App 是有 B654室出品，本着服务师生的初心，已经坚持一年有余了，然而，由于市场推广不佳，用户数量并不多，故一年后也选择过放弃。最终让我们坚持做下去的是老用户的支持与期盼，但由于支付苹果开发者账号一年也需要不少费用，所以，如果您觉得这个软件带给您方便，您也手头也有些闲钱肯支持我们，那么上方的二维码便是赞赏通道。上网呐唯一赞赏通道是李天志的支付宝付款，望大家不要上当受骗。     同时，由于开发者已经大四，希望有心接管的同学联系我们，qq 群 643337348</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7RO-80-hCl" firstAttribute="top" secondItem="WSw-3B-1eW" secondAttribute="bottom" constant="55" id="5aF-GW-S8q"/>
+                            <constraint firstItem="TBn-L9-GbX" firstAttribute="centerX" secondItem="7RO-80-hCl" secondAttribute="centerX" id="8ae-rr-U5u"/>
+                            <constraint firstItem="TBn-L9-GbX" firstAttribute="top" secondItem="7RO-80-hCl" secondAttribute="bottom" constant="8" symbolic="YES" id="Mes-me-InX"/>
+                            <constraint firstItem="7RO-80-hCl" firstAttribute="centerX" secondItem="rL7-XR-Bxt" secondAttribute="centerX" id="Who-V4-I3F"/>
+                            <constraint firstItem="EnE-fv-qCC" firstAttribute="top" secondItem="TBn-L9-GbX" secondAttribute="bottom" constant="75" id="yYH-Uf-jrY"/>
+                            <constraint firstItem="TBn-L9-GbX" firstAttribute="leading" secondItem="rL7-XR-Bxt" secondAttribute="leadingMargin" constant="24" id="z8k-5C-k3X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lOF-45-90G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Upr-Se-H8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="B5m-EZ-Sk2">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="lWy-6E-ZaK"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="821.60000000000002" y="-957.63546798029563"/>
+        </scene>
         <!--help-->
         <scene sceneID="DME-n9-ARR">
             <objects>
@@ -247,7 +314,7 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                         <viewControllerLayoutGuide type="bottom" id="NEz-ag-6ia"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mrr-GN-Djj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXt-vH-lv4">
@@ -261,8 +328,15 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                     <segue destination="BYZ-38-t0r" kind="modal" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="DmI-pD-vWl"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="widget-help" translatesAutoresizingMaskIntoConstraints="NO" id="wIK-wL-hi6">
+                                <rect key="frame" x="2.5" y="306" width="315" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wIK-wL-hi6" secondAttribute="height" multiplier="57:23" constant="44.869565217391312" id="Far-Dh-uWZ"/>
+                                    <constraint firstAttribute="height" constant="109" id="kTY-9I-IEV"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRM-U3-2dO">
-                                <rect key="frame" x="76.5" y="496" width="222" height="41"/>
+                                <rect key="frame" x="49" y="496" width="222" height="41"/>
                                 <string key="text">使用中，有任何建议或bug
 欢迎加入QQ群：643337348</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -270,28 +344,28 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mn0-Ni-yf9">
-                                <rect key="frame" x="43" y="176" width="289" height="80"/>
+                                <rect key="frame" x="15.5" y="175.5" width="289" height="80.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.下拉通知栏，左划至widget控件菜单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7E-hH-37F">
-                                        <rect key="frame" x="0.0" y="0.0" width="289" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="289" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.下划至最低端，点击编辑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-pP-nMC">
-                                        <rect key="frame" x="0.0" y="20" width="289" height="20"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="289" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="3.添加“上网呐”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dto-0O-jJo">
-                                        <rect key="frame" x="0.0" y="40" width="289" height="20"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="289" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.大功告成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG4-fI-B7r">
-                                        <rect key="frame" x="0.0" y="60" width="289" height="20"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="289" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -303,15 +377,8 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                                     <constraint firstAttribute="bottom" secondItem="Dto-0O-jJo" secondAttribute="bottom" constant="20" symbolic="YES" id="ShE-m8-OPh"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="widget-help" translatesAutoresizingMaskIntoConstraints="NO" id="wIK-wL-hi6">
-                                <rect key="frame" x="30" y="306" width="315" height="109"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wIK-wL-hi6" secondAttribute="height" multiplier="57:23" constant="44.869565217391312" id="Far-Dh-uWZ"/>
-                                    <constraint firstAttribute="height" constant="109" id="kTY-9I-IEV"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7T-ao-dWM">
-                                <rect key="frame" x="101" y="94" width="173" height="42"/>
+                                <rect key="frame" x="73.5" y="108" width="173" height="41"/>
                                 <string key="text">温馨提示：
 使用widget更高效哦～</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -323,23 +390,19 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="XRM-U3-2dO" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="0Bc-fn-LJ1"/>
-                            <constraint firstItem="V7T-ao-dWM" firstAttribute="centerX" secondItem="Mn0-Ni-yf9" secondAttribute="centerX" id="71z-x5-FKb"/>
                             <constraint firstItem="XRM-U3-2dO" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="86a-mC-ytE"/>
                             <constraint firstItem="wIK-wL-hi6" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="BDG-JO-OWD"/>
                             <constraint firstItem="CXt-vH-lv4" firstAttribute="top" secondItem="gT3-yv-NQI" secondAttribute="bottom" constant="20" id="Cel-yU-64W"/>
+                            <constraint firstItem="V7T-ao-dWM" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="D4x-2Q-3vy"/>
                             <constraint firstItem="Mn0-Ni-yf9" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="GZF-Ee-Uko"/>
                             <constraint firstItem="XRM-U3-2dO" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="HGp-HS-9De"/>
-                            <constraint firstItem="Mn0-Ni-yf9" firstAttribute="top" secondItem="V7T-ao-dWM" secondAttribute="bottom" constant="40" id="Ir3-Tw-wqL"/>
                             <constraint firstItem="XRM-U3-2dO" firstAttribute="top" secondItem="Mn0-Ni-yf9" secondAttribute="bottom" constant="240.5" id="LF0-tq-jRG"/>
-                            <constraint firstItem="V7T-ao-dWM" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="Mym-oB-TOj"/>
-                            <constraint firstItem="V7T-ao-dWM" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="TM9-wy-neQ"/>
                             <constraint firstItem="XRM-U3-2dO" firstAttribute="top" secondItem="gT3-yv-NQI" secondAttribute="bottom" constant="476" id="TjD-aB-XUg"/>
                             <constraint firstItem="wIK-wL-hi6" firstAttribute="top" secondItem="Mn0-Ni-yf9" secondAttribute="bottom" constant="50" id="Vnz-dr-yLZ"/>
-                            <constraint firstItem="V7T-ao-dWM" firstAttribute="top" secondItem="gT3-yv-NQI" secondAttribute="bottom" constant="74" id="WCw-7f-WNJ"/>
                             <constraint firstItem="Mn0-Ni-yf9" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="nsc-nl-p6x"/>
-                            <constraint firstItem="wIK-wL-hi6" firstAttribute="top" secondItem="V7T-ao-dWM" secondAttribute="bottom" constant="170" id="qxF-dz-9W3"/>
                             <constraint firstItem="wIK-wL-hi6" firstAttribute="centerX" secondItem="mrr-GN-Djj" secondAttribute="centerX" id="rn6-aV-xGr"/>
                             <constraint firstItem="CXt-vH-lv4" firstAttribute="leading" secondItem="mrr-GN-Djj" secondAttribute="leadingMargin" id="xN7-ZB-rZU"/>
+                            <constraint firstItem="V7T-ao-dWM" firstAttribute="top" secondItem="gT3-yv-NQI" secondAttribute="bottom" constant="88" id="zVp-5O-Ehe"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="8P4-to-AcP" appends="YES" id="hBX-oC-SPr"/>
@@ -357,17 +420,19 @@ if you like me ~ ✧⁺⸜(●˙▾˙●)⸝⁺✧</string>
         </scene>
     </scenes>
     <resources>
+        <image name="donation" width="100" height="100"/>
         <image name="icon-happy" width="256" height="256"/>
         <image name="icon-left" width="45" height="47"/>
         <image name="icon_hand" width="100" height="100"/>
         <image name="iconfont-password" width="72" height="72"/>
         <image name="iconfont-user" width="72" height="72"/>
+        <image name="money" width="291" height="291"/>
         <image name="owl-login" width="211" height="108"/>
         <image name="owl-login-arm-left" width="40" height="65"/>
         <image name="owl-login-arm-right" width="40" height="65"/>
         <image name="widget-help" width="664" height="228"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DmI-pD-vWl"/>
+        <segue reference="lWy-6E-ZaK"/>
     </inferredMetricsTieBreakers>
 </document>
